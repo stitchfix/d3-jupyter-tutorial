@@ -1,0 +1,75 @@
+
+.loading-data-text {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.handleText {
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+.siteNameText {
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+.pathCountry {
+  stroke: white;
+  stroke-width: 0.25px;
+  fill: #bbb;
+}
+
+.pathSite {
+  stroke: black;
+  fill-opacity: 0.8;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+.linegraph {
+  stroke: black;
+  fill-opacity: 0.8;
+  stroke-opacity: 1e-6;
+  stroke-width: 1px;
+}
+
+.pathStart {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.tempTypeTextActive {
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+.tempTypeTextInactive {
+  opacity: 0.25;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.axis {
+  opacity: 0.5;
+  font-size: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.axis .domain {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: .5;
+  stroke-width: 1.25px;
+  stroke-linecap: round;
+}
+
+.slider .handle {
+  fill: #fff;
+  stroke: #555;
+  stroke-opacity: .5;
+  stroke-width: 1.25px;
+  cursor: grab;
+}
