@@ -7,8 +7,8 @@ var width = 960,
 var color = d3.scale.category20();
 
 var force = d3.layout.force()
-    .charge(-120)
-    .linkDistance(300)
+    .charge(-300)
+    .linkDistance(50)
     .size([width, height]);
 
 d3.select("#maindiv${divnum}").selectAll("svg").remove();
@@ -18,7 +18,7 @@ var svg = d3.select("#maindiv${divnum}").append("svg")
 
 //d3.json("miserables.json", function(error, graph) {
 //  if (error) throw error;
-var graph = $data;
+var graph = $data ;
 
   force
       .nodes(graph.nodes)
@@ -35,7 +35,7 @@ var graph = $data;
       .data(graph.nodes)
     .enter().append("circle")
       .attr("class", "node")
-      .attr("r", 5)
+      .attr("r", 8)
       .style("fill", function(d) { return color(d.group); })
       .call(force.drag);
 

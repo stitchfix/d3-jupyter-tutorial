@@ -18,7 +18,7 @@ def set_styles(css_file_names):
     return "<style>" + style + "</style>"
 
 
-def draw_graph(type, data):
+def draw_graph(type, data_dict):
 
     JS_text = Template('''
     
@@ -31,8 +31,8 @@ def draw_graph(type, data):
                 ''')
 
     divnum = int(random.uniform(0,9999999999))
-    
+    data_dict['divnum'] = divnum
     main_text_template = Template( open(this_dir() + '/js/' + type + '.js','r').read() )
-    
-    main_text = main_text_template.safe_substitute({'divnum': divnum, 'data': str(data)})
+    main_text = main_text_template.safe_substitute(data_dict)
+
     return JS_text.safe_substitute({'divnum': divnum, 'main_text': main_text})
